@@ -538,46 +538,29 @@ body {
 
   <div id="scene-list">
 
-    <div class="grp">Exterior Approach</div>
-    <div class="si" id="si_ext_sw"  onclick="go('ext_sw')"><span class="d"></span>Overview — South-West</div>
-    <div class="si" id="si_ext_se"  onclick="go('ext_se')"><span class="d"></span>Overview — South-East</div>
-    <div class="si" id="si_ext_ne"  onclick="go('ext_ne')"><span class="d"></span>Overview — North-East</div>
-    <div class="si" id="si_ext_nw"  onclick="go('ext_nw')"><span class="d"></span>Overview — North-West</div>
+    <div class="grp">Outside</div>
+    <div class="si" id="si_out1" onclick="go('out1')"><span class="d"></span>Outside 1</div>
+    <div class="si" id="si_out2" onclick="go('out2')"><span class="d"></span>Outside 2</div>
+    <div class="si" id="si_out3" onclick="go('out3')"><span class="d"></span>Outside 3</div>
+    <div class="si" id="si_out4" onclick="go('out4')"><span class="d"></span>Outside 4</div>
+    <div class="si" id="si_pano14" onclick="go('pano14')"><span class="d"></span>Panorama Overview</div>
 
-    <div class="grp">DTS Equipment Station</div>
-    <div class="si fiber" id="si_dts" onclick="go('dts')">
-      <span class="d"></span>Interrogator &amp; Enclosure
-      <span class="badge">DTS</span>
-    </div>
+    <div class="grp">Garage</div>
+    <div class="si" id="si_gar1" onclick="go('gar1')"><span class="d"></span>Garage 1</div>
+    <div class="si" id="si_gar2" onclick="go('gar2')"><span class="d"></span>Garage 2</div>
 
-    <div class="grp">Cold Store — Fiber Route</div>
-    <div class="si" id="si_cs1"  onclick="go('cs1')"><span class="d"></span>Entry</div>
-    <div class="si" id="si_cs2"  onclick="go('cs2')"><span class="d"></span>Zone A</div>
-    <div class="si fiber" id="si_cs3"  onclick="go('cs3')"><span class="d"></span>Zone B — Fiber Overhead</div>
-    <div class="si" id="si_cs4"  onclick="go('cs4')"><span class="d"></span>Zone C</div>
-    <div class="si" id="si_cs5"  onclick="go('cs5')"><span class="d"></span>Zone D</div>
-    <div class="si" id="si_cs6"  onclick="go('cs6')"><span class="d"></span>Zone E</div>
-    <div class="si" id="si_cs7"  onclick="go('cs7')"><span class="d"></span>Zone F</div>
-    <div class="si" id="si_cs8"  onclick="go('cs8')"><span class="d"></span>Zone G</div>
-    <div class="si" id="si_cs9"  onclick="go('cs9')"><span class="d"></span>Zone H</div>
-    <div class="si fiber" id="si_cs10" onclick="go('cs10')"><span class="d"></span>Zone I — Termination End</div>
-    <div class="si" id="si_cs11" onclick="go('cs11')"><span class="d"></span>Zone J</div>
-    <div class="si" id="si_cs12" onclick="go('cs12')"><span class="d"></span>Zone K</div>
-    <div class="si" id="si_cs13" onclick="go('cs13')"><span class="d"></span>Zone L</div>
+    <div class="grp">Cold Room</div>
+    <div class="si" id="si_cr1" onclick="go('cr1')"><span class="d"></span>Coldroom 1</div>
+    <div class="si" id="si_cr2" onclick="go('cr2')"><span class="d"></span>Coldroom 2</div>
+    <div class="si" id="si_cr3" onclick="go('cr3')"><span class="d"></span>Coldroom 3</div>
+    <div class="si" id="si_cr4" onclick="go('cr4')"><span class="d"></span>Coldroom 4</div>
+    <div class="si" id="si_cr5" onclick="go('cr5')"><span class="d"></span>Coldroom 5</div>
 
-    <div class="grp">Hangar Structure</div>
-    <div class="si" id="si_hang1" onclick="go('hang1')"><span class="d"></span>Hangar — Exterior View</div>
-    <div class="si" id="si_hang2" onclick="go('hang2')"><span class="d"></span>Hangar — Main Facade</div>
-
-    <div class="grp">Aircon Compressor House</div>
-    <div class="si fiber" id="si_br1" onclick="go('br1')"><span class="d"></span>Compressor House — Zone A</div>
-    <div class="si fiber" id="si_br2" onclick="go('br2')"><span class="d"></span>Compressor House — Zone B</div>
-    <div class="si" id="si_br3" onclick="go('br3')"><span class="d"></span>Compressor House — Utility A</div>
-    <div class="si" id="si_br4" onclick="go('br4')"><span class="d"></span>Compressor House — Utility B</div>
-    <div class="si fiber" id="si_br5" onclick="go('br5')"><span class="d"></span>Compressor House — Boards</div>
-    <div class="si" id="si_br6" onclick="go('br6')"><span class="d"></span>Compressor House — Room A</div>
-    <div class="si" id="si_br7" onclick="go('br7')"><span class="d"></span>Compressor House — Room B</div>
-    <div class="si" id="si_br8" onclick="go('br8')"><span class="d"></span>Compressor House — Room C</div>
+    <div class="grp">Compressor Room</div>
+    <div class="si" id="si_comp1" onclick="go('comp1')"><span class="d"></span>Compressor Room 1</div>
+    <div class="si" id="si_comp2" onclick="go('comp2')"><span class="d"></span>Compressor Room 2</div>
+    <div class="si" id="si_comp3" onclick="go('comp3')"><span class="d"></span>Compressor Room 3</div>
+    <div class="si" id="si_comp4" onclick="go('comp4')"><span class="d"></span>Compressor Room 4</div>
 
   </div>
 
@@ -644,8 +627,8 @@ body {
   <button id="hamburger" onclick="openSidebar()" aria-label="Open menu">&#9776;</button>
 
   <div id="overlay">
-    <div id="ov-title">Site Overview</div>
-    <div id="ov-zone">Exterior Approach — South-West</div>
+    <div id="ov-title">Outside 1</div>
+    <div id="ov-zone">Outside</div>
   </div>
 
 </div>
@@ -665,81 +648,32 @@ body {
 <script>
 // ─── Scene data ──────────────────────────────────────────────────────────────
 
-const IM = {
-  dts_panel: {
-    src: 'Image7.jpg',
-    title: 'DTS Interrogator & Enclosure',
-    cap: 'DTS interrogator unit (white, top-left) and junction enclosure (orange) mounted at the equipment station. The interrogator processes the Raman back-scatter signal from the sensing fiber to produce a continuous temperature profile along the cable length.'
-  },
-  fiber_cable: {
-    src: 'Image4.jpg',
-    title: 'DTS Sensing Fiber — Wall / Floor Route',
-    cap: 'Red DTS sensing fiber running along the wall at low level. The fiber continues into the ceiling span above the cold store, forming the primary temperature-monitoring zone. Minimum bend radius to be respected at all corners.'
-  },
-  ceiling_route: {
-    src: 'Image1.jpg',
-    title: 'Cold Store — Ceiling Cable Route',
-    cap: 'DTS fiber route across the cold store ceiling. The cable runs the full longitudinal span of the refrigerated space to capture the temperature gradient from evaporators to far-end drainage zones.'
-  },
-  wall_route_2: {
-    src: 'Image2.jpg',
-    title: 'Cold Store — Cable Route: Far Wall',
-    cap: 'Fiber route at the far end of the cold store. Return loop turns back along the opposite wall before exiting to the DTS interrogator via the cable passage.'
-  },
-  boards: {
-    src: 'Image9.jpg',
-    title: 'Distribution Boards — DTS Termination Zone',
-    cap: 'Main distribution board (yellow), sub-DB (white) and terminal plate. DTS fiber gland entry and signal cable to the interrogator data port originate at this location.'
-  },
-  conduit_close: {
-    src: 'Image3.jpg',
-    title: 'Fiber Conduit — Close-up',
-    cap: 'Conduit run protecting the DTS sensing fiber through the brick passage. Conduit is fixed to the wall with saddles at 500mm centres. All bends are formed with minimum 150mm radius.'
-  }
-};
+const IM = {};
 
 const SEQ = [
-  'ext_sw','ext_se','ext_ne','ext_nw',
-  'dts',
-  'cs1','cs2','cs3','cs4','cs5','cs6','cs7','cs8','cs9','cs10','cs11','cs12','cs13',
-  'hang1','hang2',
-  'br1','br2','br3','br4','br5','br6','br7','br8'
+  'out1','out2','out3','out4','pano14',
+  'gar1','gar2',
+  'cr1','cr2','cr3','cr4','cr5',
+  'comp1','comp2','comp3','comp4'
 ];
 
-
 const SCENES = {
-  ext_sw:  { title: 'Site Overview', zone: 'Exterior Approach — South-West', panorama: 'Panorama30.jpg', yaw: 60,  hotSpots: [ hs_scene(0,100,'East View →','ext_se'), hs_scene(0,-60,'← North-West','ext_nw') ] },
-  ext_se:  { title: 'Site Overview', zone: 'Exterior Approach — South-East', panorama: 'Panorama29.jpg', yaw: -20, hotSpots: [ hs_scene(0,-120,'← South-West','ext_sw'), hs_scene(0,80,'North-East →','ext_ne'), hs_scene(0,10,'Enter: DTS Station','dts') ] },
-  ext_ne:  { title: 'Site Overview', zone: 'Exterior Approach — North-East', panorama: 'Panorama2.jpg',  yaw: 0,   hotSpots: [ hs_scene(0,-90,'← South-East','ext_se'), hs_scene(0,90,'North-West →','ext_nw') ] },
-  ext_nw:  { title: 'Site Overview', zone: 'Exterior Approach — North-West', panorama: 'Panorama4.jpg',  yaw: 0,   hotSpots: [ hs_scene(0,90,'North-East →','ext_ne'), hs_scene(0,-90,'← South-West','ext_sw'), hs_scene(0,5,'Enter: DTS Station →','dts') ] },
-
-  dts: { title: 'DTS Interrogator & Enclosure', zone: 'DTS Equipment Station — Key Install Point', panorama: 'Panorama5.jpg', yaw: -60, hotSpots: [ hs_info(12,-55,'DTS Interrogator — tap for detail','dts_panel'), hs_scene(0,120,'Exit to Exterior','ext_nw'), hs_scene(0,-150,'Enter Cold Store →','cs1') ] },
-
-  cs1:  { title: 'Cold Store — Entry',  zoneLbl: null,    zone: 'Cold Store · Entry',                      panorama: 'Panorama6.jpg',  yaw: 0, hotSpots: [ hs_scene(0,-150,'← DTS Station','dts'), hs_scene(-2,30,'ZONE A →','cs2'), hs_scene(-2,0,'→ Outside / Hangar','hang1') ] },
-  cs2:  { title: 'Cold Store — Zone A', zoneLbl: 'ZONE A', zone: 'Cold Store · Zone A',                    panorama: 'Panorama7.jpg',  yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ENTRY','cs1'), hs_scene(-2,30,'ZONE B →','cs3'), hs_scene(-2,0,'→ Outside / Hangar','hang1') ] },
-  cs3:  { title: 'Cold Store — Zone B', zoneLbl: 'ZONE B', zone: 'Cold Store · Zone B — DTS Fiber Overhead', panorama: 'Panorama8.jpg',  yaw: 0, hotSpots: [ hs_info(32,0,'DTS Fiber — Ceiling Route, tap for detail','ceiling_route'), hs_scene(-2,-160,'← ZONE A','cs2'), hs_scene(-2,30,'ZONE C →','cs4') ] },
-  cs4:  { title: 'Cold Store — Zone C', zoneLbl: 'ZONE C', zone: 'Cold Store · Zone C',                    panorama: 'Panorama9.jpg',  yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE B','cs3'), hs_scene(-2,30,'ZONE D →','cs5') ] },
-  cs5:  { title: 'Cold Store — Zone D', zoneLbl: 'ZONE D', zone: 'Cold Store · Zone D',                    panorama: 'Panorama10.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE C','cs4'), hs_scene(-2,30,'ZONE E →','cs6') ] },
-  cs6:  { title: 'Cold Store — Zone E', zoneLbl: 'ZONE E', zone: 'Cold Store · Zone E',                    panorama: 'Panorama11.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE D','cs5'), hs_scene(-2,30,'ZONE F →','cs7') ] },
-  cs7:  { title: 'Cold Store — Zone F', zoneLbl: 'ZONE F', zone: 'Cold Store · Zone F',                    panorama: 'Panorama12.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE E','cs6'), hs_scene(-2,30,'ZONE G →','cs8') ] },
-  cs8:  { title: 'Cold Store — Zone G', zoneLbl: 'ZONE G', zone: 'Cold Store · Zone G',                    panorama: 'Panorama13.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE F','cs7'), hs_scene(-2,30,'ZONE H →','cs9') ] },
-  cs9:  { title: 'Cold Store — Zone H', zoneLbl: 'ZONE H', zone: 'Cold Store · Zone H',                    panorama: 'Panorama14.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE G','cs8'), hs_scene(-2,30,'ZONE I →','cs10'), hs_scene(8,120,'→ Compressor House','br1') ] },
-  cs10: { title: 'Cold Store — Zone I', zoneLbl: 'ZONE I', zone: 'Cold Store · Zone I — DTS Termination End', panorama: 'Panorama15.jpg', yaw: 0, hotSpots: [ hs_info(5,-130,'Fiber Route — Far Wall Return, tap for detail','wall_route_2'), hs_scene(-2,-160,'← ZONE H','cs9'), hs_scene(-2,30,'ZONE J →','cs11') ] },
-  cs11: { title: 'Cold Store — Zone J', zoneLbl: 'ZONE J', zone: 'Cold Store · Zone J',                    panorama: 'Panorama16.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE I','cs10'), hs_scene(-2,30,'ZONE K →','cs12') ] },
-  cs12: { title: 'Cold Store — Zone K', zoneLbl: 'ZONE K', zone: 'Cold Store · Zone K',                    panorama: 'Panorama17.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE J','cs11'), hs_scene(-2,30,'ZONE L →','cs13') ] },
-  cs13: { title: 'Cold Store — Zone L', zoneLbl: 'ZONE L', zone: 'Cold Store · Zone L',                    panorama: 'Panorama18.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE K','cs12'), hs_scene(-2,30,'HANGAR →','hang1') ] },
-
-  hang1: { title: 'Hangar Structure',        zone: 'Hangar — Exterior',             panorama: 'Panorama19.jpg', yaw: 0, hotSpots: [ hs_scene(0,-160,'← Cold Store Zone L','cs13'), hs_scene(0,-140,'← Cold Store Entry','cs1'), hs_scene(0,80,'Hangar Facade →','hang2'), hs_scene(0,30,'Enter Compressor House →','br1') ] },
-  hang2: { title: 'Hangar — Main Bifold Door', zone: 'Hangar — Large-Span Structure', panorama: 'Panorama20.jpg', yaw: 0, hotSpots: [ hs_scene(0,-80,'← Hangar Exterior','hang1'), hs_scene(0,80,'Cable Passage →','br1') ] },
-
-  br1: { title: 'Compressor House — Zone A', zone: 'Aircon Compressor House · DTS Fiber Conduit Route',   panorama: 'Panorama21.jpg', yaw: 0, hotSpots: [ hs_info(5,-120,'DTS Conduit — Wall Route, tap for detail','conduit_close'), hs_scene(0,150,'← Hangar','hang1'), hs_scene(0,-30,'Continue →','br2'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br2: { title: 'Compressor House — Zone B', zone: 'Aircon Compressor House · DTS Fiber Conduit Route',   panorama: 'Panorama22.jpg', yaw: 0, hotSpots: [ hs_info(5,90,'DTS Conduit Continuation, tap for detail','fiber_cable'), hs_scene(0,150,'← Zone A','br1'), hs_scene(0,-30,'Continue →','br3'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br3: { title: 'Compressor House — Utility A', zone: 'Aircon Compressor House · Utility Space',          panorama: 'Panorama23.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Zone B','br2'), hs_scene(0,-30,'Continue →','br4'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br4: { title: 'Compressor House — Utility B', zone: 'Aircon Compressor House · Utility Space',          panorama: 'Panorama24.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Utility A','br3'), hs_scene(0,-30,'Continue →','br5'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br5: { title: 'Compressor House — Boards',    zone: 'Aircon Compressor House · DTS Termination & Boards', panorama: 'Panorama25.jpg', yaw: 0, hotSpots: [ hs_info(5,-20,'MDB / Sub-DB — DTS Termination, tap for detail','boards'), hs_scene(0,150,'← Utility B','br4'), hs_scene(0,-30,'Continue →','br6'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br6: { title: 'Compressor House — Room A',    zone: 'Aircon Compressor House · Equipment Space',        panorama: 'Panorama26.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Boards','br5'), hs_scene(0,-30,'Continue →','br7'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br7: { title: 'Compressor House — Room B',    zone: 'Aircon Compressor House · Equipment Space',        panorama: 'Panorama27.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Room A','br6'), hs_scene(0,-30,'Continue →','br8'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
-  br8: { title: 'Compressor House — Room C',    zone: 'Aircon Compressor House · Equipment Space',        panorama: 'Panorama28.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Room B','br7'), hs_scene(8,60,'→ Cold Store Zone H','cs9'), hs_scene(0,-30,'Return to Overview','ext_sw') ] },
+  out1:  { title: 'Outside 1',       zone: 'Outside',         panorama: 'Outside 1.png',          yaw: 0, hotSpots: [] },
+  out2:  { title: 'Outside 2',       zone: 'Outside',         panorama: 'Outside 2.png',          yaw: 0, hotSpots: [] },
+  out3:  { title: 'Outside 3',       zone: 'Outside',         panorama: 'Outside 3.png',          yaw: 0, hotSpots: [] },
+  out4:  { title: 'Outside 4',       zone: 'Outside',         panorama: 'Outside 4.png',          yaw: 0, hotSpots: [] },
+  pano14:{ title: 'Panorama Overview', zone: 'Outside',        panorama: 'Panorama14.png',         yaw: 0, hotSpots: [] },
+  gar1:  { title: 'Garage 1',        zone: 'Garage',          panorama: 'Garage 1.png',           yaw: 0, hotSpots: [] },
+  gar2:  { title: 'Garage 2',        zone: 'Garage',          panorama: 'Garage 2.png',           yaw: 0, hotSpots: [] },
+  cr1:   { title: 'Coldroom 1',      zone: 'Cold Room',       panorama: 'Coldroom 1.png',         yaw: 0, hotSpots: [] },
+  cr2:   { title: 'Coldroom 2',      zone: 'Cold Room',       panorama: 'Coldroom 2.png',         yaw: 0, hotSpots: [] },
+  cr3:   { title: 'Coldroom 3',      zone: 'Cold Room',       panorama: 'Coldroom 3.png',         yaw: 0, hotSpots: [] },
+  cr4:   { title: 'Coldroom 4',      zone: 'Cold Room',       panorama: 'Coldroom 4.png',         yaw: 0, hotSpots: [] },
+  cr5:   { title: 'Coldroom 5',      zone: 'Cold Room',       panorama: 'Coldroom 5.png',         yaw: 0, hotSpots: [] },
+  comp1: { title: 'Compressor Room 1', zone: 'Compressor Room', panorama: 'Compressor Room 1.png',  yaw: 0, hotSpots: [] },
+  comp2: { title: 'Compressor Room 2', zone: 'Compressor Room', panorama: 'Compressor room 2.png',  yaw: 0, hotSpots: [] },
+  comp3: { title: 'Compressor Room 3', zone: 'Compressor Room', panorama: 'Compressor room 3.png',  yaw: 0, hotSpots: [] },
+  comp4: { title: 'Compressor Room 4', zone: 'Compressor Room', panorama: 'Compressor Room 4.png',  yaw: 0, hotSpots: [] },
 };
 
 function hs_info() { return {}; }
@@ -758,7 +692,7 @@ function closeSidebar() {
 
 // ─── Viewer ───────────────────────────────────────────────────────────────────
 
-let viewer, current = 'ext_sw';
+let viewer, current = 'out1';
 
 function buildConfig() {
   const out = {};
@@ -770,11 +704,11 @@ function buildConfig() {
 
 function init() {
   viewer = pannellum.viewer('panorama', {
-    default: { firstScene: 'ext_sw', sceneFadeDuration: 700, autoLoad: true, hfov: 100, showControls: true, showZoomCtrl: false, showFullscreenCtrl: true, keyboardZoom: false },
+    default: { firstScene: 'out1', sceneFadeDuration: 700, autoLoad: true, hfov: 100, showControls: true, showZoomCtrl: false, showFullscreenCtrl: true, keyboardZoom: false },
     scenes: buildConfig()
   });
   viewer.on('scenechange', id => activate(id));
-  activate('ext_sw');
+  activate('out1');
 }
 
 function go(id) {
