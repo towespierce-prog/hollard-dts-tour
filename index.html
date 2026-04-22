@@ -131,11 +131,14 @@ body {
 
 /* Pannellum overrides */
 .pnlm-hotspot.pnlm-info {
-  background: rgba(232, 119, 34, 0.88) !important;
+  background-image: none !important;
+  background-color: rgba(232, 119, 34, 0.88) !important;
   border: 2px solid rgba(255,255,255,0.85) !important;
   border-radius: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
 }
-.pnlm-hotspot.pnlm-info:hover { background: #e87722 !important; }
+.pnlm-hotspot.pnlm-info:hover { background-color: #e87722 !important; }
 .pnlm-tooltip {
   background: rgba(12,12,12,0.94) !important;
   color: #eee !important;
@@ -498,15 +501,15 @@ body {
     <div class="si" id="si_hang1" onclick="go('hang1')"><span class="d"></span>Hangar — Exterior View</div>
     <div class="si" id="si_hang2" onclick="go('hang2')"><span class="d"></span>Hangar — Main Facade</div>
 
-    <div class="grp">Cable Passage — Brick Zone</div>
-    <div class="si fiber" id="si_br1" onclick="go('br1')"><span class="d"></span>Passage Zone A — Conduit</div>
-    <div class="si fiber" id="si_br2" onclick="go('br2')"><span class="d"></span>Passage Zone B — Conduit</div>
-    <div class="si" id="si_br3" onclick="go('br3')"><span class="d"></span>Utility Area A</div>
-    <div class="si" id="si_br4" onclick="go('br4')"><span class="d"></span>Utility Area B</div>
-    <div class="si fiber" id="si_br5" onclick="go('br5')"><span class="d"></span>Equipment Room — Boards</div>
-    <div class="si" id="si_br6" onclick="go('br6')"><span class="d"></span>Equipment Room A</div>
-    <div class="si" id="si_br7" onclick="go('br7')"><span class="d"></span>Equipment Room B</div>
-    <div class="si" id="si_br8" onclick="go('br8')"><span class="d"></span>Equipment Room C</div>
+    <div class="grp">Aircon Compressor House</div>
+    <div class="si fiber" id="si_br1" onclick="go('br1')"><span class="d"></span>Compressor House — Zone A</div>
+    <div class="si fiber" id="si_br2" onclick="go('br2')"><span class="d"></span>Compressor House — Zone B</div>
+    <div class="si" id="si_br3" onclick="go('br3')"><span class="d"></span>Compressor House — Utility A</div>
+    <div class="si" id="si_br4" onclick="go('br4')"><span class="d"></span>Compressor House — Utility B</div>
+    <div class="si fiber" id="si_br5" onclick="go('br5')"><span class="d"></span>Compressor House — Boards</div>
+    <div class="si" id="si_br6" onclick="go('br6')"><span class="d"></span>Compressor House — Room A</div>
+    <div class="si" id="si_br7" onclick="go('br7')"><span class="d"></span>Compressor House — Room B</div>
+    <div class="si" id="si_br8" onclick="go('br8')"><span class="d"></span>Compressor House — Room C</div>
 
   </div>
 
@@ -633,7 +636,7 @@ const SCENES = {
   cs6:  { title: 'Cold Store — Zone E', zoneLbl: 'ZONE E', zone: 'Cold Store · Zone E',                    panorama: 'Panorama11.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE D','cs5'), hs_scene(-2,30,'ZONE F →','cs7') ] },
   cs7:  { title: 'Cold Store — Zone F', zoneLbl: 'ZONE F', zone: 'Cold Store · Zone F',                    panorama: 'Panorama12.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE E','cs6'), hs_scene(-2,30,'ZONE G →','cs8') ] },
   cs8:  { title: 'Cold Store — Zone G', zoneLbl: 'ZONE G', zone: 'Cold Store · Zone G',                    panorama: 'Panorama13.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE F','cs7'), hs_scene(-2,30,'ZONE H →','cs9') ] },
-  cs9:  { title: 'Cold Store — Zone H', zoneLbl: 'ZONE H', zone: 'Cold Store · Zone H',                    panorama: 'Panorama14.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE G','cs8'), hs_scene(-2,30,'ZONE I →','cs10') ] },
+  cs9:  { title: 'Cold Store — Zone H', zoneLbl: 'ZONE H', zone: 'Cold Store · Zone H',                    panorama: 'Panorama14.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE G','cs8'), hs_scene(-2,30,'ZONE I →','cs10'), hs_scene(8,120,'→ Compressor House','br1') ] },
   cs10: { title: 'Cold Store — Zone I', zoneLbl: 'ZONE I', zone: 'Cold Store · Zone I — DTS Termination End', panorama: 'Panorama15.jpg', yaw: 0, hotSpots: [ hs_info(5,-130,'Fiber Route — Far Wall Return, tap for detail','wall_route_2'), hs_scene(-2,-160,'← ZONE H','cs9'), hs_scene(-2,30,'ZONE J →','cs11') ] },
   cs11: { title: 'Cold Store — Zone J', zoneLbl: 'ZONE J', zone: 'Cold Store · Zone J',                    panorama: 'Panorama16.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE I','cs10'), hs_scene(-2,30,'ZONE K →','cs12') ] },
   cs12: { title: 'Cold Store — Zone K', zoneLbl: 'ZONE K', zone: 'Cold Store · Zone K',                    panorama: 'Panorama17.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE J','cs11'), hs_scene(-2,30,'ZONE L →','cs13') ] },
@@ -642,14 +645,14 @@ const SCENES = {
   hang1: { title: 'Hangar Structure',        zone: 'Hangar — Exterior',             panorama: 'Panorama19.jpg', yaw: 0, hotSpots: [ hs_scene(0,-160,'← Cold Store','cs13'), hs_scene(0,80,'Hangar Facade →','hang2'), hs_scene(0,30,'Enter Cable Passage →','br1') ] },
   hang2: { title: 'Hangar — Main Bifold Door', zone: 'Hangar — Large-Span Structure', panorama: 'Panorama20.jpg', yaw: 0, hotSpots: [ hs_scene(0,-80,'← Hangar Exterior','hang1'), hs_scene(0,80,'Cable Passage →','br1') ] },
 
-  br1: { title: 'Cable Passage — Zone A', zone: 'Brick Zone · DTS Fiber Conduit Route',      panorama: 'Panorama21.jpg', yaw: 0, hotSpots: [ hs_info(5,-120,'DTS Conduit — Wall Route, tap for detail','conduit_close'), hs_scene(0,150,'← Hangar','hang1'), hs_scene(0,-30,'Continue →','br2') ] },
-  br2: { title: 'Cable Passage — Zone B', zone: 'Brick Zone · DTS Fiber Conduit Route',      panorama: 'Panorama22.jpg', yaw: 0, hotSpots: [ hs_info(5,90,'DTS Conduit Continuation, tap for detail','fiber_cable'), hs_scene(0,150,'← Passage A','br1'), hs_scene(0,-30,'Continue →','br3') ] },
-  br3: { title: 'Utility Area — A',       zone: 'Brick Zone · Utility Space',                panorama: 'Panorama23.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Passage B','br2'), hs_scene(0,-30,'Continue →','br4') ] },
-  br4: { title: 'Utility Area — B',       zone: 'Brick Zone · Utility Space',                panorama: 'Panorama24.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Utility A','br3'), hs_scene(0,-30,'Equipment Room →','br5') ] },
-  br5: { title: 'Equipment Room — Boards', zone: 'Brick Zone · DTS Termination & Boards',    panorama: 'Panorama25.jpg', yaw: 0, hotSpots: [ hs_info(5,-20,'MDB / Sub-DB — DTS Termination, tap for detail','boards'), hs_scene(0,150,'← Utility B','br4'), hs_scene(0,-30,'Continue →','br6') ] },
-  br6: { title: 'Equipment Room — A',     zone: 'Brick Zone · Equipment Space',              panorama: 'Panorama26.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Boards','br5'), hs_scene(0,-30,'Continue →','br7') ] },
-  br7: { title: 'Equipment Room — B',     zone: 'Brick Zone · Equipment Space',              panorama: 'Panorama27.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Equipment A','br6'), hs_scene(0,-30,'Continue →','br8') ] },
-  br8: { title: 'Equipment Room — C',     zone: 'Brick Zone · Equipment Space',              panorama: 'Panorama28.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Equipment B','br7'), hs_scene(0,-30,'Return to Overview','ext_sw') ] },
+  br1: { title: 'Compressor House — Zone A', zone: 'Aircon Compressor House · DTS Fiber Conduit Route',   panorama: 'Panorama21.jpg', yaw: 0, hotSpots: [ hs_info(5,-120,'DTS Conduit — Wall Route, tap for detail','conduit_close'), hs_scene(0,150,'← Hangar','hang1'), hs_scene(0,-30,'Continue →','br2'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br2: { title: 'Compressor House — Zone B', zone: 'Aircon Compressor House · DTS Fiber Conduit Route',   panorama: 'Panorama22.jpg', yaw: 0, hotSpots: [ hs_info(5,90,'DTS Conduit Continuation, tap for detail','fiber_cable'), hs_scene(0,150,'← Zone A','br1'), hs_scene(0,-30,'Continue →','br3'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br3: { title: 'Compressor House — Utility A', zone: 'Aircon Compressor House · Utility Space',          panorama: 'Panorama23.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Zone B','br2'), hs_scene(0,-30,'Continue →','br4'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br4: { title: 'Compressor House — Utility B', zone: 'Aircon Compressor House · Utility Space',          panorama: 'Panorama24.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Utility A','br3'), hs_scene(0,-30,'Continue →','br5'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br5: { title: 'Compressor House — Boards',    zone: 'Aircon Compressor House · DTS Termination & Boards', panorama: 'Panorama25.jpg', yaw: 0, hotSpots: [ hs_info(5,-20,'MDB / Sub-DB — DTS Termination, tap for detail','boards'), hs_scene(0,150,'← Utility B','br4'), hs_scene(0,-30,'Continue →','br6'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br6: { title: 'Compressor House — Room A',    zone: 'Aircon Compressor House · Equipment Space',        panorama: 'Panorama26.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Boards','br5'), hs_scene(0,-30,'Continue →','br7'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br7: { title: 'Compressor House — Room B',    zone: 'Aircon Compressor House · Equipment Space',        panorama: 'Panorama27.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Room A','br6'), hs_scene(0,-30,'Continue →','br8'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
+  br8: { title: 'Compressor House — Room C',    zone: 'Aircon Compressor House · Equipment Space',        panorama: 'Panorama28.jpg', yaw: 0, hotSpots: [ hs_scene(0,150,'← Room B','br7'), hs_scene(8,60,'→ Cold Store Zone H','cs9'), hs_scene(0,-30,'Return to Overview','ext_sw') ] },
 };
 
 // ─── Sidebar (mobile) ─────────────────────────────────────────────────────────
