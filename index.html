@@ -441,9 +441,10 @@ body {
 
 /* Sidebar powered-by — visible on mobile inside sidebar */
 #sidebar-powered {
-  display: none;
+  display: block;
   padding: 12px 14px 16px;
   border-top: 1px solid #242424;
+  flex-shrink: 0;
 }
 #sp-label {
   font-size: 8px;
@@ -493,7 +494,6 @@ body {
 
   #legend-box { display: none; }
   #powered-by { display: none; }
-  #sidebar-powered { display: block; }
 
   #overlay { padding: 60px 14px 80px; }
   #ov-title { font-size: 14px; }
