@@ -222,7 +222,7 @@ body {
   text-transform: uppercase;
   padding: 8px 16px;
   cursor: pointer;
-  z-index: 50;
+  z-index: 998;
   white-space: nowrap;
   display: none;
   -webkit-tap-highlight-color: transparent;
@@ -241,30 +241,33 @@ body {
 /* Client logo — top-right overlay */
 #client-logo {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 60;
+  top: 12px;
+  right: 12px;
+  z-index: 999;
   pointer-events: none;
+  background: rgba(255,255,255,0.93);
+  border-radius: 7px;
+  padding: 5px 13px 5px 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  gap: 0;
 }
-#client-logo img {
-  height: 38px;
-  width: auto;
-  display: block;
-  filter: drop-shadow(0 1px 6px rgba(0,0,0,0.7));
+.logo-word {
+  font-family: 'Arial Rounded MT Bold', 'Nunito', 'Segoe UI', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #5b2c82;
+  letter-spacing: -0.3px;
+  line-height: 1;
 }
-#logo-text {
-  display: none;
-  background: #003da5;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2.5px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.55);
-  font-family: 'Segoe UI', Arial, sans-serif;
+.logo-dot {
+  font-family: 'Arial Rounded MT Bold', 'Nunito', 'Segoe UI', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #e87722;
+  line-height: 1;
+  margin-left: 1px;
 }
 
 #nav-btns {
@@ -519,8 +522,7 @@ body {
 
   <!-- Client logo — top right -->
   <div id="client-logo">
-    <img src="hollard-logo.svg" alt="Hollard" onerror="this.style.display='none';document.getElementById('logo-text').style.display='block'">
-    <div id="logo-text">HOLLARD</div>
+    <span class="logo-word">Hollard</span><span class="logo-dot">.</span>
   </div>
 
   <!-- Zone badge — current zone, top centre -->
