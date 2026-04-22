@@ -273,27 +273,6 @@ body {
   margin-left: 1px;
 }
 
-#nav-btns {
-  position: absolute;
-  bottom: 18px;
-  right: 16px;
-  display: flex;
-  gap: 8px;
-}
-.nav-btn {
-  background: rgba(0,0,0,0.65);
-  border: 1px solid #3a3a3a;
-  color: #ccc;
-  padding: 10px 18px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.15s, border-color 0.15s;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-.nav-btn:active, .nav-btn:hover { background: rgba(232,119,34,0.2); border-color: #e87722; color: #fff; }
-.nav-btn:disabled { opacity: 0.2; pointer-events: none; }
 
 #legend-box {
   position: absolute;
@@ -420,17 +399,6 @@ body {
   #ov-title { font-size: 14px; }
   #ov-zone { font-size: 10px; }
 
-  #nav-btns {
-    bottom: 20px;
-    right: 12px;
-    gap: 10px;
-  }
-  .nav-btn {
-    padding: 13px 20px;
-    font-size: 15px;
-    border-radius: 8px;
-  }
-
   #modal { padding: 10px; }
   #modal-cap { font-size: 11px; padding: 10px 14px; }
   #modal-ttl { font-size: 13px; }
@@ -542,11 +510,6 @@ body {
     <div id="ov-zone">Exterior Approach — South-West</div>
   </div>
 
-  <div id="nav-btns">
-    <button class="nav-btn" id="btn-prev" onclick="navStep(-1)">&#8592; Prev</button>
-    <button class="nav-btn" id="btn-next" onclick="navStep(1)">Next &#8594;</button>
-  </div>
-
   <div id="legend-box">
     <div class="lg"><div class="lg-d" style="background:#e87722"></div>DTS equipment / cable detail</div>
     <div class="lg"><div class="lg-d" style="background:#4a9eff"></div>Move to next scene</div>
@@ -628,8 +591,8 @@ const SCENES = {
 
   dts: { title: 'DTS Interrogator & Enclosure', zone: 'DTS Equipment Station — Key Install Point', panorama: 'Panorama5.jpg', yaw: -60, hotSpots: [ hs_info(12,-55,'DTS Interrogator — tap for detail','dts_panel'), hs_scene(0,120,'Exit to Exterior','ext_nw'), hs_scene(0,-150,'Enter Cold Store →','cs1') ] },
 
-  cs1:  { title: 'Cold Store — Entry',  zoneLbl: null,    zone: 'Cold Store · Entry',                      panorama: 'Panorama6.jpg',  yaw: 0, hotSpots: [ hs_scene(0,-150,'← DTS Station','dts'),  hs_scene(-2,30,'ZONE A →','cs2') ] },
-  cs2:  { title: 'Cold Store — Zone A', zoneLbl: 'ZONE A', zone: 'Cold Store · Zone A',                    panorama: 'Panorama7.jpg',  yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ENTRY','cs1'),  hs_scene(-2,30,'ZONE B →','cs3') ] },
+  cs1:  { title: 'Cold Store — Entry',  zoneLbl: null,    zone: 'Cold Store · Entry',                      panorama: 'Panorama6.jpg',  yaw: 0, hotSpots: [ hs_scene(0,-150,'← DTS Station','dts'), hs_scene(-2,30,'ZONE A →','cs2'), hs_scene(-2,0,'→ Outside / Hangar','hang1') ] },
+  cs2:  { title: 'Cold Store — Zone A', zoneLbl: 'ZONE A', zone: 'Cold Store · Zone A',                    panorama: 'Panorama7.jpg',  yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ENTRY','cs1'), hs_scene(-2,30,'ZONE B →','cs3'), hs_scene(-2,0,'→ Outside / Hangar','hang1') ] },
   cs3:  { title: 'Cold Store — Zone B', zoneLbl: 'ZONE B', zone: 'Cold Store · Zone B — DTS Fiber Overhead', panorama: 'Panorama8.jpg',  yaw: 0, hotSpots: [ hs_info(32,0,'DTS Fiber — Ceiling Route, tap for detail','ceiling_route'), hs_scene(-2,-160,'← ZONE A','cs2'), hs_scene(-2,30,'ZONE C →','cs4') ] },
   cs4:  { title: 'Cold Store — Zone C', zoneLbl: 'ZONE C', zone: 'Cold Store · Zone C',                    panorama: 'Panorama9.jpg',  yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE B','cs3'), hs_scene(-2,30,'ZONE D →','cs5') ] },
   cs5:  { title: 'Cold Store — Zone D', zoneLbl: 'ZONE D', zone: 'Cold Store · Zone D',                    panorama: 'Panorama10.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE C','cs4'), hs_scene(-2,30,'ZONE E →','cs6') ] },
@@ -642,7 +605,7 @@ const SCENES = {
   cs12: { title: 'Cold Store — Zone K', zoneLbl: 'ZONE K', zone: 'Cold Store · Zone K',                    panorama: 'Panorama17.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE J','cs11'), hs_scene(-2,30,'ZONE L →','cs13') ] },
   cs13: { title: 'Cold Store — Zone L', zoneLbl: 'ZONE L', zone: 'Cold Store · Zone L',                    panorama: 'Panorama18.jpg', yaw: 0, hotSpots: [ hs_scene(-2,-160,'← ZONE K','cs12'), hs_scene(-2,30,'HANGAR →','hang1') ] },
 
-  hang1: { title: 'Hangar Structure',        zone: 'Hangar — Exterior',             panorama: 'Panorama19.jpg', yaw: 0, hotSpots: [ hs_scene(0,-160,'← Cold Store','cs13'), hs_scene(0,80,'Hangar Facade →','hang2'), hs_scene(0,30,'Enter Cable Passage →','br1') ] },
+  hang1: { title: 'Hangar Structure',        zone: 'Hangar — Exterior',             panorama: 'Panorama19.jpg', yaw: 0, hotSpots: [ hs_scene(0,-160,'← Cold Store Zone L','cs13'), hs_scene(0,-140,'← Cold Store Entry','cs1'), hs_scene(0,80,'Hangar Facade →','hang2'), hs_scene(0,30,'Enter Compressor House →','br1') ] },
   hang2: { title: 'Hangar — Main Bifold Door', zone: 'Hangar — Large-Span Structure', panorama: 'Panorama20.jpg', yaw: 0, hotSpots: [ hs_scene(0,-80,'← Hangar Exterior','hang1'), hs_scene(0,80,'Cable Passage →','br1') ] },
 
   br1: { title: 'Compressor House — Zone A', zone: 'Aircon Compressor House · DTS Fiber Conduit Route',   panorama: 'Panorama21.jpg', yaw: 0, hotSpots: [ hs_info(5,-120,'DTS Conduit — Wall Route, tap for detail','conduit_close'), hs_scene(0,150,'← Hangar','hang1'), hs_scene(0,-30,'Continue →','br2'), hs_scene(8,60,'→ Cold Store Zone H','cs9') ] },
@@ -729,8 +692,6 @@ function activate(id) {
       nextEl.classList.add('visible');
     } else { nextEl.classList.remove('visible'); }
   }
-  document.getElementById('btn-prev').disabled = idx <= 0;
-  document.getElementById('btn-next').disabled = idx >= SEQ.length - 1;
 }
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
